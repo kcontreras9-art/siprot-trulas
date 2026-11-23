@@ -113,4 +113,7 @@ aplicacion = gr.Interface(
 )
 
 if __name__ == "__main__":
-    aplicacion.launch()
+    import os
+
+puerto = int(os.environ.get("PORT", 10000))
+aplicacion.launch(server_name="0.0.0.0", server_port=puerto)
